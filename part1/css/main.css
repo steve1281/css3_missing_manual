@@ -1,0 +1,9 @@
+/* generally speaking - some project wide css */
+header {
+	font-size:x-large;
+	color:darkgreen;
+}
+footer {
+	font-size:small;
+	color:lightgray;
+}
