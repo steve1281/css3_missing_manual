@@ -19,11 +19,30 @@
 	    font-style: normal;
 	
 	}
+	@font-face {
+	    font-family: 'katy_berryregular_italic';
+	    src: url('fonts/kberry-webfont.eot');
+	    src: url('fonts/kberry-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('fonts/kberry-webfont.woff') format('woff'),
+	         url('fonts/kberry-webfont.ttf') format('truetype'),
+	         url('fonts/kberry-webfont.svg#katy_berryregular') format('svg');
+	    font-weight: bolder;
+	    font-style: italic;
+	
+	}
 
+	content span {
+		font-family : 'katy_berryregular_italic';
+		font-size: 2.0em;
+	}
 	content p {
 		font-family: 'katy_berryregular';
 		font-weight: normal;
-		font-size: 4.0em;
+		font-size: 2.0em;
+	}
+	content p span {
+		font-family: 'helvetica';
+		
 	}
 </style>
 	<!--[if lt IE 9]><script src="//htmlshiv.googlecode.com/svn/trunk/html5.js"></script> <![endif] -->
@@ -31,16 +50,20 @@
 <body>
 	<header>Part 2 - Custom Fonts</header>
 	<content>
-		<p>find a ttf font (for mac), download and then goto http://www.fontsquirrel.com/tools/webfont-generator 
-		from this site, you can generate a set of files, copy them into the "fonts" folder.
+		<p>find a <span>ttf</span> font (for mac), download and then goto 
+			<span>
+			<a href="http://www.fontsquirrel.com/tools/webfont-generator">http://www.fontsquirrel.com/tools/webfont-generator</a> 
+			</span> 
+		(note: the katy berry font has no slashes, so I had to switch to helvetica) from this site, you can generate a set of files, copy them into the "fonts" folder.
 		see the source of this code for how to use :-)</p>
+		
 	</content>
 	<footer>
 		
 		<p>Tutorials originally from CSS3, the missing manual, 3rd Ed.<br /> Used for educational purposes only.</p></footer>
 	<script>
 	$(document).ready( function (){
-		$( "#menu" ).menu();
+		
 	});
 	</script>
 </body>

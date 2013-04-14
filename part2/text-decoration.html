@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -5,24 +6,47 @@
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
      
         <link rel="stylesheet" href="css/eggplant/jquery-ui-1.10.1.custom.min.css" type="text/css"/>
+ 		
+
+<style>
+.underlined {
+	text-decoration:underline;
+}
+.overlined {
+	text-decoration:overline;
+}
+.linethrough {
+	text-decoration:line-through;
+}
+.blink {
+	text-decoration:blink;
+}
+.all {
+	text-decoration:blink line-through overline underline;
+}
+
+	content span {
+	}
+	content em {
+	}
+	footer {
+	}
+</style>
+
 
 	<!--[if lt IE 9]><script src="//htmlshiv.googlecode.com/svn/trunk/html5.js"></script> <![endif] -->
 </head>
 <body>
-	<header>Part 2 - Applied CSS</header>
+	<header>Google Font</header>
 	<content>
-		<ul id="menu">
-			<li><a href="custom-font.html">Custom Font</a></li> 
-			<li><a href="google-font.html">Google Font</a></li> 
-			<li><a href="text-decoration.html">Text decoration</a></li>
-
-		</ul>
+	<p class="underlined">underlined text is awesome</p>
+	<p class="overlined">overlined text is kinda goofy</p>
+	<p class="linethrough">line through can drive home a point</p>
+	<p class="blink">blink is awesome</p>
+	<p class="all">Lets do em all!</p>
 	</content>
 	<footer>Tutorials originally from CSS3, the missing manual, 3rd Ed.<br /> Used for educational purposes only.</footer>
 	<script>
-	$(document).ready( function (){
-		$( "#menu" ).menu();
-	});
 	</script>
 </body>
 </html>
