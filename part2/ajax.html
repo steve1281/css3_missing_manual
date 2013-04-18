@@ -1,0 +1,72 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>New Web Project</title>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
+     
+        <link rel="stylesheet" href="css/eggplant/jquery-ui-1.10.1.custom.min.css" type="text/css"/>
+           
+        <style>
+        	
+        </style>
+        <script>
+  			$(document).ready(function() {
+ 				var val="12"
+   	
+   	
+				   	// Assign handlers immediately after making the request,
+				// and remember the jqxhr object for this request
+				var jqxhr = $.post("../../index.html", {"id" : val}, function(data) {
+					//$('.modal-body').html(data);
+					var win = window.open();
+					win.document.write(data);	
+					//alert("success");
+				})
+				.done(function() { 
+					//alert("second success"); 
+					})
+				.fail(
+					function(jqXHR, exception) {
+			            if (jqXHR.status === 0) {
+			                alert('Not connected.\n Verify Network (must be same domain).');
+			            } else if (jqXHR.status == 404) {
+			                alert('Requested page not found. [404]');
+			            } else if (jqXHR.status == 500) {
+			                alert('Internal Server Error [500].');
+			            } else if (exception === 'parsererror') {
+			                alert('Requested JSON parse failed.');
+			            } else if (exception === 'timeout') {
+			                alert('Time out error.');
+			            } else if (exception === 'abort') {
+			                alert('Ajax request aborted.');
+			            } else {
+			                alert('Uncaught Error.\n' + jqXHR.responseText);
+			            }
+			        }
+					
+					
+				)
+				.always(function() { 
+					//alert("finished"); 
+					});
+  			});
+  		</script>
+ 	</head>
+ 	<body>
+		<p>
+			this will open a new (tab) page loading in data from another page.
+			
+			theoretically - that page we post to can fiddle the response.
+			
+		</p> 		
+ 		<div class='modal-body'>
+ 			
+ 		</div>
+ 	</body>	
+ </html>
+ 	
