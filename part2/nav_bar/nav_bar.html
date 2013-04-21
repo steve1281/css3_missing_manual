@@ -51,7 +51,7 @@ body {
 
 .mainNav a {
 	color: #000000;
-	font-size: 11px;
+	font-size: 11px; /* this controls the height; this determines how "tall" your sprite cell should be */
 	text-transform: uppercase;
 	text-decoration: none;
 	border: 1px dashed #999;
@@ -64,17 +64,49 @@ body {
 	background-position: 0 2px;
 }
 
+.mainNav a:hover {
+	font-weight: bold;
+	background-color: #b2f511;
+	background-position: 3px 50%; /* 0% first image, 50% second image, 100% last image. constrained by the font actually. */
+}
+
+.home .homeLink,
+.feature .featureLink,
+.expert .expertLink,
+.quiz .quizLink,
+.project .projectLink,
+.horoscope horoscopeLink
+ {
+	background-color: #ffffff;
+	background-position: 97% 100%;
+	padding-right: 15px;
+	padding-left: 30px;
+	font-weight: bold;
+	
+}
+
+.home .homeLink,
+.feature .featureLink,
+.expert .expertLink,
+.quiz .quizLink,
+.project .projectLink,
+.horoscope horoscopeLink a:hover !important
+ {
+	background-color: #ffffff;
+	
+}
+
 
 </style>
 </head>
-<body>
+<body class="feature">
   <ul class="mainNav">
-    <li><a href="/index.html">Home</a></li>
-    <li><a href="/features/">Features</a></li>
-    <li><a href="/experts/">Experts</a></li>
-    <li><a href="/quiz/">Quiz</a></li>
-    <li><a href="/projects/">Projects</a></li>
-    <li><a href="/horoscopes/">Horoscopes</a></li>
+    <li><a href="/index.html"  class="homeLink">Home           </a></li>
+    <li><a href="/features/"   class="featureLink">Features    </a></li>
+    <li><a href="/experts/"    class="expertLink">Experts      </a></li>
+    <li><a href="/quiz/"       class="quizLink">Quiz           </a></li>
+    <li><a href="/projects/"   class="projectLink">Projects    </a></li>
+    <li><a href="/horoscopes/" class="horoscopeLink">Horoscopes</a></li>
   </ul>
 </body>
 </html>
