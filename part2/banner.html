@@ -21,6 +21,86 @@ nav a:hover {
 	transform: scale(1.2);
 }
 
+@-moz-keyframes logo {
+	from {
+		-moz-transform: rotate(0) scale(.5);
+		left: 120%;
+	}
+	50% {
+		-moz-transform: rotate(-720deg) scale(.5);
+		left: 0;
+	}
+	to {
+		-moz-transform: rotate(0) scale(1);
+	}
+	
+}
+@-o-keyframes logo {
+	from {
+		-o-transform: rotate(0) scale(.5);
+		left: 120%;
+	}
+	50% {
+		-o-transform: rotate(-720deg) scale(.5);
+		left: 0;
+	}
+	to {
+		-o-transform: rotate(0) scale(1);
+	}
+	
+}
+@-webkit-keyframes logo {
+	from {
+		-webkit-transform: rotate(0) scale(.5);
+		left: 120%;
+	}
+	50% {
+		-webkit-transform: rotate(-720deg) scale(.5);
+		left: 0;
+	}
+	to {
+		-webkit-transform: rotate(0) scale(1);
+	}
+	
+}
+@-ms-keyframes logo {
+	from {
+		-ms-transform: rotate(0) scale(.5);
+		left: 120%;
+	}
+	50% {
+		-ms-transform: rotate(-720deg) scale(.5);
+		left: 0;
+	}
+	to {
+		-ms-transform: rotate(0) scale(1);
+	}
+	
+}
+@keyframes logo {
+	from {
+		transform: rotate(0) scale(.5);
+		left: 120%;
+	}
+	50% {
+		transform: rotate(-720deg) scale(.5);
+		left: 0;
+	}
+	to {
+		transform: rotate(0) scale(1);
+	}
+	
+}
+
+.logo {
+	-moz-animation: logo 3s;
+	-o-animation: logo 3s;
+	-ms-animation: logo 3s;
+	-webkit-animation: logo 3s;
+	animation: logo 3s;
+}
+
+}
 </style>
 <!--[if lt IE 9]>
 <script src="html5shiv.js"></script>
