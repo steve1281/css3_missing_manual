@@ -156,7 +156,7 @@ footer a {
   border-left: dashed 1px rgb(153,153,153);
   border-right: dashed 1px rgb(153,153,153);
 }
-.sidebar2 {
+.sidebar1 {
   float: right;
   width: 20%;	
   padding: 0 10px 0 20px;
@@ -184,3 +184,59 @@ img.right {
 	margin: 0 0 10px 10px;
 }
 
+/* ---- media syles --- */
+ @media (min-width: 481px) and (max-width:768px) 
+ {
+ 	/* this media style applies to devices at least 481 but no more than 768 */
+ 	/* its good for most tablets.*/
+ 	.sidebar2 {
+ 		float: none;
+ 		width: auto;
+ 		clear: both;
+ 		border-top: 2px solid black;
+ 		padding-top: 10px;
+ 	}
+ 	.columnWrapper {
+ 		width: auto;
+ 	}
+ 	.main {
+ 		border-right: none;
+ 	}
+ }
+
+@media (max-width:480px)
+{
+	/* this media style applies to devices with a max width of 480 */
+	/* a typical phone for example */
+	
+	.columnWrapper, .main , .sidebar1, .sidebar2
+	{
+		float:none;
+		width:auto;
+	}
+	
+	.sidebar1, .sidebar2
+	{
+		border-top: 2px solid black;
+		margin-top: 25px;
+		padding-top: 10px;
+	}
+	
+	header h1 {
+		font-size: 1.5em;
+	}
+	nav {
+		text-align: center;
+	}
+	nav li {
+		float: none;
+		display: inline-block;
+		
+	}
+	nav a {
+		float: none;
+		display: inline-block;
+		border: none;
+	}
+
+}
