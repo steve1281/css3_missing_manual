@@ -1,15 +1,27 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	
+	    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
+     
+        <link rel="stylesheet" href="css/eggplant/jquery-ui-1.10.1.custom.min.css" type="text/css"/>
+        <link rel="stylesheet" href="css/footer.css" type="text/css" />
+
 	<!--[if lt IE 9]><script src="//htmlshiv.googlecode.com/svn/trunk/html5.js"></script> <![endif] -->
 </head>
 <body>
-	<header>Template to be used for pages in this project.</header>
+	<header>Part 4 - Advanced CSS </header>
 	<content>
-		<ul>
+		<ul id="menu">
+		<li><a href="ch16/print.html">Print Style Sheet: Tut 1 CH16</a></li>
 		</ul>
+		
 	</content>
-	<footer>Place footer text here</footer>
+	<footer><p>Tutorials originally from CSS3, the missing manual, 3rd Ed.<br /> Used for educational purposes only.</p></footer>
+	<script>
+	$(document).ready( function (){
+		$( "#menu" ).menu();
+	});
+	</script>
 </body>
 </html>
