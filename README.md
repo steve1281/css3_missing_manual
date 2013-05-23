@@ -1,4 +1,5 @@
 css3_missing_manual
 ===================
 
-share point for my work with the CSS3 MIssing manual Reference Book
+
+share point for my work with the CSS3 Missing manual Reference Book
